@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Lista de Usuários</string>
+    <string name="api_load_error">Erro ao carregar dados</string>
 </resources>

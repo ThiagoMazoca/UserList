@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -49,7 +50,7 @@ public class UserListActivity extends AppCompatActivity {
 
             @Override
             public void onUserListFailed() {
-                // Msg de erro
+                Toast.makeText(UserListActivity.this, R.string.api_load_error, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -64,7 +65,7 @@ public class UserListActivity extends AppCompatActivity {
 
             @Override
             public void onError(Throwable t) {
-                // Msg de erro
+                Toast.makeText(UserListActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
